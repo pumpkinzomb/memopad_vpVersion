@@ -16,14 +16,11 @@ const port = process.env.PORT || 5000;
 
 
 
-var mongodbUri ='mongodb://@' || process.env.MONGODB_URI;
+const mongodbUri = 'mongodb+srv://zomb:asdf1@memopad.yefxf.mongodb.net/memopad?retryWrites=true&w=majority';
 mongoose.connect(mongodbUri, {
-  useNewUrlParser: true,
-  auth: {
-    user: 'id',
-    password: 'pw'
-  }
+  useNewUrlParser: true
 });
+
 var conn = mongoose.connection;    
 conn.on('error', console.error.bind(console, 'Connection error: '));  
  
